@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/frontend/css/style.css">
+    <script data-main="frontend/scripts/main" src="/frontend/scripts/libs/require.js"></script>
+    <script id="template" type="text/template">
+        {{#messages}}
+        <div class="message">
+            <p>
+                {{username}}
+                <span class="createDate">{{created_on}}</span>
+            </p>
+            {{text}}
+        </div>
+        {{/messages}}
+    </script>
+
+</head>
+<body>
+    <div class="chat">
+        <p class="heading">SHOUTBOX</p>
+        <p>
+            <label for="newMessage">
+                <input id="newMessage" type="text">
+                <input id="sayButton" type="button" value="Say">
+            </label>
+        </p>
+        <div class="messagesArea" id="messagesArea">
+
+        </div>
+        <p class="footer">
+            <input type="button" value="load more" id="moreButton">
+        </p>
+    </div>
+</body>
+</html>
